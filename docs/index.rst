@@ -30,6 +30,14 @@ Schwabdev Documentation
     :target: https://github.com/tylerebowers/Schwab-API-Python
     :alt: GitHub
 
+.. toctree::
+    :maxdepth: 2
+
+    api
+    client
+    stream
+    orders
+
 Installation
 ------------
 
@@ -46,7 +54,7 @@ Quick setup
     * Enable TOS (Thinkorswim) for your Schwab account, it is needed for orders and other api calls.
 #. Install packages
     * Install schwabdev :code:`pip install schwabdev`
-    * *You may need to use :code:`pip3` instead of :code:`pip`*
+    * *You may need to use* :code:`pip3` *instead of* :code:`pip`
 #. Examples on how to use the client are in the :code:`examples/` folder (add your keys in the .env file)
     * The first time you run you will have to sign in to your Schwab account using the generated link in the terminal.
     * After signing in, agree to the terms, and select account(s). Then you will have to copy the link in the address bar and paste it into the terminal.
@@ -60,27 +68,6 @@ Quick setup
 
     print(client.account_linked().json()) #make api calls
 
-
-What can this program do?
--------------------------
-
-* Authenticate and access the full api.
-* Automatic token management and "access token" refreshes.
-* Functions for all api functions (examples in :code:`examples/api_demo.py`)
-* Stream real-time data with a customizable response handler (examples in :code:`examples/stream_demo.py`)
-* Place orders and get order details (examples in :code:`examples/orders_demo.py`)
-* Option for capture of callback urls when callback has a port (starts webserver on this port).
-* Option for automatic starting/stopping of streamer when market opens/closes.
-* Streaming stability with automatic restarts if the streamer crashes.
-
-Notes
------
-
-| The schwabdev folder contains code for main operations:
-* :code:`__init__.py` linker to client class.
-* :code:`client.py` contains functions relating to api calls and requests.
-* :code:`tokens.py` contains functions relating to token management.
-* :code:`stream.py` contains functions for streaming data from websockets.
 
 Youtube Tutorials
 -----------------
