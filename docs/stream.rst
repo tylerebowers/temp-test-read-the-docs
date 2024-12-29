@@ -50,7 +50,7 @@ If you want to start the streamer automatically when the market opens then inste
 Shown are the default values which will start & stop the streamer during normal market hours (9:30am-4:00pm). If you want to start and/or stop the streamer at specific times then set the ``start_time`` and ``stop_time`` parameters to ``datetime.time(HH,MM,SS)``, times are in EST (“America/New_York”); You can also change the days when the streamer starts by the ``on_days`` parameter, the default (Mon-Fri) is ``on_days=(0,1,2,3,4)``. Starting the stream automatically will preserve the previous subscriptions. If you want to use a custom timezone for now then set the ``now_timezone`` parameter to ``zoneinfo.ZoneInfo(...)``.
 
 Stopping the stream
-------------------
+-------------------
 To stop the streamer use ``streamer.stop()``, pass the parameter ``clear_subscriptions=False`` (default: true) if you want to keep the recorded subscriptions -> this means that the next time you start the steam it will resubscribe to the previous subscriptions (except if program is restarted).
 
 Sending stream requests
